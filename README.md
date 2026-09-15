@@ -1,6 +1,27 @@
 # Private Network Chat
 
-Simple Java 8 chat with AES-GCM encryption, multiple users, colored messages, and optional Tor SOCKS routing.
+![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=openjdk)
+![Build](https://img.shields.io/badge/build-Maven-blue?logo=apachemaven)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+> A small, privacy-focused desktop chat application for encrypted local or private network conversations.
+
+## About
+
+Private Network Chat is a Java Swing application built for simple, direct communication. It supports multiple connected users, AES-GCM encrypted messages, selectable message colors, a private room model, and optional Tor SOCKS routing.
+
+The project is intentionally lightweight: no database, no external chat service, and no complicated setup. Build it with Maven, start a server, and connect from one or more clients.
+
+## Highlights
+
+| Capability | Details |
+| --- | --- |
+| Encryption | AES-GCM with PBKDF2 key derivation |
+| Networking | Multi-client TCP server and client |
+| Interface | Java Swing desktop GUI |
+| Rooms | Private room model included |
+| Privacy | Optional Tor SOCKS proxy support |
+| Compatibility | Java 8 or newer |
 
 ## Requirements
 
@@ -31,6 +52,8 @@ In the GUI:
 4. Type a message and click `Send`.
 
 To use multiple computers, run the server on one computer and enter its local IP address in the other clients.
+
+> Build the project before running it. The JAR is created inside `target/`.
 
 ## Run the server separately
 
@@ -71,6 +94,23 @@ Use the same strong passphrase for the server and all clients. Tor hides the net
 - Private room model
 - Selectable message colors
 - Java SOCKS/Tor support
+
+## Suggested GitHub topics
+
+`java` `java8` `swing` `networking` `chat-application` `encryption` `aes-gcm` `privacy` `tor` `socks-proxy` `maven`
+
+## Project structure
+
+- `ChatApp.java` - Swing GUI
+- `ChatServer.java` - multi-client encrypted server
+- `ChatClient.java` - encrypted client with SOCKS support
+- `PrivacyCrypto.java` - AES-GCM and PBKDF2 helpers
+- `ChatConsoleApp.java` - terminal client for headless systems
+- `ChatRoom.java` and `ChatUser.java` - room and user models
+
+## Security note
+
+Use a strong shared passphrase and do not use the default passphrase for real deployments. Tor can hide the network path, but it does not replace application-level encryption.
 
 ## Tests
 
