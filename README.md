@@ -118,11 +118,6 @@ Use a strong shared passphrase and do not use the default passphrase for real de
 mvn test
 ```
 
-## Releases and packages
-
-- [Releases](https://github.com/nadabakhay/java-privacy-chat-app-/releases) - download published versions
-- [Packages](https://github.com/users/nadabakhay/packages?repo_name=java-privacy-chat-app-) - view published GitHub packages
-
 ## License
 
 MIT License. See [LICENSE](LICENSE).
